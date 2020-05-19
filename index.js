@@ -93,7 +93,6 @@ bot.on('message', message => {
             message.channel.send(ids)
             break;
         case 'price':
-            let Item = args[1].toUpperCase();
 
             Item()
                 let bazaarapi = `https://api.hypixel.net/skyblock/bazaar/product?key=e88a734d-1ead-4377-ac1d-221a6d441d38&productId=${args[1]}`
