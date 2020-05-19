@@ -1,0 +1,21 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node .": "node run index.js"
+  },
+  "author": "Joshua D.",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.2",
+    "discord.js": "^12.2.0",
+    "google-spreadsheet": "^3.0.11",
+    "hypixel": "^1.0.3",
+    "ms": "^2.1.2",
+    "snekfetch": "^4.0.4",
+    "ytdl-core": "^2.1.2"
+  }
+}
