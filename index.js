@@ -94,7 +94,7 @@ bot.on('message', message => {
             break;
         case 'price':
 
-            Item()
+            
                 let bazaarapi = `https://api.hypixel.net/skyblock/bazaar/product?key=e88a734d-1ead-4377-ac1d-221a6d441d38&productId=${args[1]}`
                 snekfetch.get(bazaarapi).then(r => {
                     if (!bazaarapi === 'true') return message.channel.send('Please provide a VALID item! You can see all the valid ids with s.ids')
@@ -103,7 +103,6 @@ bot.on('message', message => {
                 let buyOrders = r.body.product_info.quick_status.buyOrders;
                 let buyVolume = r.body.product_info.quick_status.buyVolume;
                 // console.log(productinfo)
-                if (!Item) return message.channel.send('Please provide an item!')
 
 
                 const bazaarprice = new Discord.MessageEmbed()
