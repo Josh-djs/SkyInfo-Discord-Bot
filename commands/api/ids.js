@@ -1,0 +1,46 @@
+const Discord = require('discord.js');
+
+module.exports = {
+    name: "ids",
+    description: "gives a paged list of item ids that is sorted by category",
+    category: "api",
+    run: async (client, message, args) => {
+        const pages = {1:{name: "Farming", value: "BROWN_MUSHROOM\n CACTUS\n CARROT_ITEM\n ENCHANTED_BAKED_POTATO\n ENCHANTED_BREAD\n ENCHANTED_BROWN_MUSHROOM\n ENCHANTED_CACTUS\n ENCHANTED_CACTUS_GREEN\n ENCHANTED_CAKE\n ENCHANTED_CARROT\n ENCHANTED_CARROT_ON_A_STICK\n ENCHANTED_CARROT_STICK\n ENCHANTED_COCOA\n ENCHANTED_COOKED_MUTTON\n ENCHANTED_COOKIE\n ENCHANTED_EGG\n ENCHANTED_FEATHER\n ENCHANTED_GLISTERING_MELON\n ENCHANTED_GOLDEN_CARROT\n ENCHANTED_GRILLED_PORK\n ENCHANTED_HAY_BLOCK\n ENCHANTED_HUGE_MUSHROOM_1\n ENCHANTED_HUGE_MUSHROOM_2\n ENCHANTED_LEATHER\n ENCHANTED_MELON\n ENCHANTED_MELON_BLOCK\n ENCHANTED_MUTTON\n ENCHANTED_NETHER_STALK\n ENCHANTED_PAPER\n ENCHANTED_PORK\n ENCHANTED_POTATO\n ENCHANTED_PUMPKIN\n ENCHANTED_RABBIT\n ENCHANTED_RABBIT_FOOT\n ENCHANTED_RABBIT_HIDE\n ENCHANTED_RAW_BEEF\n ENCHANTED_RAW_CHICKEN\n ENCHANTED_RED_MUSHROOM\n ENCHANTED_SEEDS\n ENCHANTED_SUGAR\n ENCHANTED_SUGAR_CANE\n FEATHER\n HAY_BLOCK\n HUGE_MUSHROOM_1\n HUGE_MUSHROOM_2\n LEATHER\n MELON\n MUTTON\n NETHER_STALK\n PORK\n POTATO_ITEM\n PUMPKIN\n RAW_BEEF\n RAW_CHICKEN\n RED_MUSHROOM\n SEEDS\n SUGAR_CANE\n SUPER_EGG\n WHEAT\n"}, 2:{name: "Combat", value: "BLAZE_ROD\n BONE\n ENCHANTED_BLAZE_POWDER\n ENCHANTED_BLAZE_ROD\n ENCHANTED_BONE_BLOCK\n ENCHANTED_BONE\n ENCHANTED_ENDER_PEARL\n ENCHANTED_EYE_OF_ENDER\n ENCHANTED_FERMENTED_SPIDER_EYE\n ENCHANTED_FIREWORK_ROCKET\n ENCHANTED_GHAST_TEAR\n ENCHANTED_MAGMA_CREAM\n ENCHANTED_ROTTEN_FLESH\n ENCHANTED_SLIME_BALL\n ENCHANTED_SLIME_BLOCK\n ENCHANTED_SPIDER_EYE\n ENCHANTED_STRING\n ENDER_PEARL\n GHAST_TEAR\n MAGMA_CREAM\n ROTTEN_FLESH\n SLIME_BALL\n SPIDER_EYE\n"}, 3: {name: "Mining", value: "COAL\n COBBLESTONE\n DIAMOND\n EMERALD\n ENCHANTED_CHARCOAL\n ENCHANTED_COAL_BLOCK\n ENCHANTED_COAL\n ENCHANTED_COBBLESTONE\n ENCHANTED_DIAMOND​\n ENCHANTED_DIAMOND_BLOCK\n ENCHANTED_EMERALD_BLOCK\n ENCHANTED_EMERALD\n ENCHANTED_ENDSTONE\n ENCHANTED_FLINT\n ENCHANTED_GLOWSTONE_DUST\n ENCHANTED_GLOWSTONE\n ENCHANTED_GOLD_BLOCK\n ENCHANTED_GOLD\n ENCHANTED_GUNPOWDER\n ENCHANTED_ICE\n ENCHANTED_IRON_BLOCK\n ENCHANTED_IRON\n ENCHANTED_LAPIS_LAZULI_BLOCK\n ENCHANTED_LAPIS_LAZULI\n ENCHANTED_OBSIDIAN\n ENCHANTED_PACKED_ICE\n ENCHANTED_QUARTZ_BLOCK\n ENCHANTED_QUARTZ\n ENCHANTED_REDSTONE_BLOCK\n ENCHANTED_REDSTONE\n ENCHANTED_SAND\n ENCHANTED_SNOW_BLOCK\n ENDER_STONE\n FLINT\n GLOWSTONE_DUST\n GOLD_INGOT\n GRAVEL\n ICE\n IRON_INGOT\n NETHERRACK\n OBSIDIAN\n PACKED_ICE\n QUARTZ\n REDSTONE\n SAND\n SNOW_BALL\n SNOW_BLOCK\n"}, 4:{name:"Foraging & Fishing", value: "BLESSED_BAIT\n CARROT_BAIT\n CLAY_BALL\n DARK_BAIT\n ENCHANTED_ACACIA_LOG\n ENCHANTED_BIRCH_LOG\n ENCHANTED_CLAY_BALL\n ENCHANTED_CLOWNFISH\n ENCHANTED_COOKED_FISH\n ENCHANTED_COOKED_SALMON\n ENCHANTED_DARK_OAK_LOG\n ENCHANTED_INK_SACK\n ENCHANTED_JUNGLE_LOG\n ENCHANTED_OAK_LOG\n ENCHANTED_PRISMARINE_CRYSTALS\n ENCHANTED_PRISMARINE_SHARD\n ENCHANTED_PUFFERFISH\n ENCHANTED_RAW_FISH\n ENCHANTED_RAW_SALMON\n ENCHANTED_SPONGE\n ENCHANTED_SPRUCE_LOG\n ENCHANTED_WATER_LILY\n ENCHANTED_WET_SPONGE\n FISH_BAIT\n ICE_BAIT\n INK_SACK:3\n INK_SACK:4\n INK_SACK\n LIGHT_BAIT\n LOG_2:1\n LOG_2\n LOG:1\n LOG:2\n LOG:3\n LOG\n MINNOW_BAIT\n RAW_FISH:2\n RAW_FISH:3\n RAW_FISH\n RAW_FISH:1\n PRISMARINE_CRYSTALS\n PRISMARINE_SHARD\n SPIKED_BAIT\n SPONGE\n SPOOKY_BAIT\n WATER_LILY\n WHALE_BAIT"}, 5:{name: "Misc", value: "CATALYST\n COMPACTOR\n ENCHANTED_LAVA_BUCKET\n ENCHANTED_REDSTONE_LAMP\n FOUL_FLESH\n FUMING_POTATO_BOOK\n GOLDEN_TOOTH\n GREEN_CANDY\n GREEN_GIFT\n HAMSTER_WHEEL\n HOLY_FRAGMENT\n HOT_POTATO_BOOK\n OLD_FRAGMENT\n PROTECTOR_FRAGMENT\n PURPLE_CANDY\n RECOMBOBULATOR_3000\n RED_GIFT\n REVENANT_FLESH\n REVENANT_VISCERA\n STOCK_OF_STONKS\n STRONG_FRAGMENT\n SULPHUR\n SUMMONING_EYE\n SUPER_COMPACTOR_3000\n SUPERIOR_FRAGMENT\n TARANTULA_SILK\n TARANTULA_WEB\n UNSTABLE_FRAGMENT\n WHITE_GIFT\n WISE_FRAGMENT\n WOLF_TOOTH\n YOUNG_FRAGMENT"}};
+        let page = 1;
+
+        let embed = new Discord.MessageEmbed()
+        .setColor('BLUE')
+        .setDescription(`${pages[page].name} \n\n ${pages[page].value}`)
+        .setFooter(`Page ${page} of ${Object.keys(pages).length}`)
+
+        message.channel.send(embed).then(async msg => {
+
+            await msg.react('⬅️');
+            await msg.react('➡️');
+
+            const backFilter = (reaction, user) => reaction.emoji.name === '⬅️' && user.id === message.author.id;
+            const forwardFilter = (reaction, user) => reaction.emoji.name === '➡️' && user.id === message.author.id;
+
+            const backwards = msg.createReactionCollector(backFilter, { time: 60000 });
+            const forwards = msg.createReactionCollector(forwardFilter, { time: 60000 });
+
+            backwards.on('collect', r => {
+                msg.reactions.resolve('⬅️').users.remove(message.author.id)
+                if(page === 1) return;
+                page--;
+                embed.setDescription(`${pages[page].name}\n\n${pages[page].value}`)
+                embed.setFooter(`Page ${page} of ${Object.keys(pages).length}`)
+                msg.edit(embed)
+            })
+
+            forwards.on('collect', r => {
+                msg.reactions.resolve('➡️').users.remove(message.author.id)
+                if(page === Object.keys(pages).length) return;
+                page++;
+                embed.setDescription(`${pages[page].name}\n\n${pages[page].value}`)
+                embed.setFooter(`Page ${page} of ${Object.keys(pages).length}`)
+                msg.edit(embed)
+            })
+        });
+    }
+};
